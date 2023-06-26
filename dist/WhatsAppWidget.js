@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { motion, AnimatePresence } from "framer-motion";
 const WhatsAppWidget = ({
-  phone
+  phoneNumber,
+  autoOpen = false,
+  popupMessage,
+  className
 }) => {
   const [message, setMessage] = useState("");
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(autoOpen);
   const handleSendClick = () => {
-    const whatsappURL = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");
   };
   const handleWhatsappClick = () => {
@@ -28,16 +31,16 @@ const WhatsAppWidget = ({
     },
     className: "fixed bg-white rounded-md shadow-xl z-40 right-0 bottom-[100px] m-6"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "p-4 flex flex-col gap-4"
+    className: className || "p-4 flex flex-col gap-4"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h5", {
     className: "text-xl font-semibold"
   }, "Hello !"), /*#__PURE__*/React.createElement("p", {
-    className: "text-sm text-textGray"
-  }, "Message us on Whatsapp!")), /*#__PURE__*/React.createElement("div", {
+    className: "text-sm text-gray-400"
+  }, popupMessage || "Message us on Whatsapp!")), /*#__PURE__*/React.createElement("div", {
     className: "flex flex-col gap-4"
   }, /*#__PURE__*/React.createElement("textarea", {
     type: "text",
-    className: "w-full border px-4 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-secondary placeholder:text-sm",
+    className: "w-full border px-4 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-[#25D366] placeholder:text-sm",
     placeholder: "Message...",
     value: message,
     onChange: e => {
