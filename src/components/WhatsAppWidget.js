@@ -27,7 +27,7 @@ const WhatsAppWidget = ({ phoneNumber, autoOpen=false, popupMessage, className }
             exit={{ opacity: 0, translateY: "10%" }}
             className="fixed bg-white rounded-md shadow-xl z-40 right-0 bottom-[100px] m-6"
           >
-            <div className={className || "p-4 flex flex-col gap-4"}>
+            <div className={`p-4 flex flex-col gap-4 ${className}`}>
               <div>
                 <h5 className="text-xl font-semibold">Hello !</h5>
                 <p className="text-sm text-gray-400">

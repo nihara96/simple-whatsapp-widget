@@ -31,7 +31,7 @@ const WhatsAppWidget = ({
     },
     className: "fixed bg-white rounded-md shadow-xl z-40 right-0 bottom-[100px] m-6"
   }, /*#__PURE__*/React.createElement("div", {
-    className: className || "p-4 flex flex-col gap-4"
+    className: `p-4 flex flex-col gap-4 ${className}`
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h5", {
     className: "text-xl font-semibold"
   }, "Hello !"), /*#__PURE__*/React.createElement("p", {
