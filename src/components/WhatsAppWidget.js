@@ -1,31 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { motion, AnimatePresence } from "framer-motion";
 
 const WhatsAppWidget = ({ phone }) => {
   const [message, setMessage] = useState("");
-  const [open, setOpen] = useState(true);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        // Adjust the breakpoint as per your mobile view requirements
-        setOpen(false);
-      } else {
-        setOpen(true);
-      }
-    };
-
-    handleResize(); // Call the function initially to set the initial state based on the viewport width
-
-    // Attach the event listener for window resize
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const [open, setOpen] = useState(false);
 
   const handleSendClick = () => {
     const whatsappURL = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(
