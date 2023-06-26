@@ -39,7 +39,10 @@ Simply import the WhatsAppWidget component and place it in your React component 
 
 The WhatsAppWidget component accepts several optional props to customize its appearance and behavior. Here are the available props:
 
--**phoneNumber**: Specify the phone number to which the WhatsApp messages should be sent. -**autoOpen**: Set it to true to automatically open the WhatsApp chat widget when the component is mounted. -**message**: Provide a pre-defined message that will be included in the initial WhatsApp message. -**className**: Add custom CSS classes to the WhatsApp chat widget container.
+**phoneNumber**: Specify the phone number to which the WhatsApp messages should be sent. <br>
+**autoOpen**: Set it to true to automatically open the WhatsApp chat widget when the component is mounted. <br>
+**message**: Provide a pre-defined message that will be included in the initial WhatsApp message. <br>
+**className**: Add custom CSS classes to the WhatsApp chat widget container.<br>
 
 Example usage with props:
 
