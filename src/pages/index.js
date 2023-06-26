@@ -1,9 +1,9 @@
-import WhatsAppWidget from "./WhatsAppWidget";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 export default function Home() {
   return (
     <main>
-      <WhatsAppWidget/>
+      <WhatsAppWidget />
     </main>
-  )
+  );
 }
