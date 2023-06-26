@@ -1,10 +1,12 @@
 import React from "react";
-import WhatsAppWidget from "../../dist/WhatsAppWidget";
+import WhatsAppWidget from "simple-whatsapp-widget";
 
 const Test = () => {
-  return <div>
-    <WhatsAppWidget/>
-  </div>;
+  return (
+    <div>
+      <WhatsAppWidget />
+    </div>
+  );
 };
 
 export default Test;
