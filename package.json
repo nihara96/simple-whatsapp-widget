@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
-    "build": "babel src/components -d dist",
+    "build": "next build && babel src/components -d dist",
     "start": "next start",
     "lint": "next lint"
   },
