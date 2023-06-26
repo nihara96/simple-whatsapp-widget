@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { motion, AnimatePresence } from "framer-motion";
 
-const WhatsAppWidget = ({ phone }) => {
+const WhatsAppWidget = ({ phoneNumber, autoOpen=false, popupMessage, className }) => {
   const [message, setMessage] = useState("");
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(autoOpen);
 
   const handleSendClick = () => {
-    const whatsappURL = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
       message
     )}`;
     window.open(whatsappURL, "_blank");
@@ -27,15 +27,17 @@ const WhatsAppWidget = ({ phone }) => {
             exit={{ opacity: 0, translateY: "10%" }}
             className="fixed bg-white rounded-md shadow-xl z-40 right-0 bottom-[100px] m-6"
           >
-            <div className="p-4 flex flex-col gap-4">
+            <div className={className || "p-4 flex flex-col gap-4"}>
               <div>
                 <h5 className="text-xl font-semibold">Hello !</h5>
-                <p className="text-sm text-textGray">Message us on Whatsapp!</p>
+                <p className="text-sm text-gray-400">
+                  {popupMessage || "Message us on Whatsapp!"}
+                </p>
               </div>
               <div className="flex flex-col gap-4">
                 <textarea
                   type="text"
-                  className="w-full border px-4 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-secondary placeholder:text-sm"
+                  className="w-full border px-4 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-[#25D366] placeholder:text-sm"
                   placeholder="Message..."
                   value={message}
                   onChange={(e) => {

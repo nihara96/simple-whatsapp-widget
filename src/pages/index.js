@@ -4,7 +4,7 @@ import React from "react";
 export default function Home() {
   return (
     <main>
-      <WhatsAppWidget />
+      <WhatsAppWidget phoneNumber="9477123456"/>
     </main>
   );
 }

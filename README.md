@@ -1,38 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Simple WhatsApp Widget
 
-## Getting Started
+Simple WhatsApp Widget is a lightweight and easy-to-use React component that allows you to add a WhatsApp chat widget to your web application.
 
-First, run the development server:
+## Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+You can install the package using npm:
+
+```shell
+npm install simple-whatsapp-widget
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+or using yarn:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```shell
+yarn add simple-whatsapp-widget
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Usage
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```javascript
+import React from "react";
+import WhatsAppWidget from "simple-whatsapp-widget";
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+const Test = () => {
+  return (
+    <div>
+      <WhatsAppWidget />
+    </div>
+  );
+};
 
-## Learn More
+export default Test;
+```
 
-To learn more about Next.js, take a look at the following resources:
+Simply import the WhatsAppWidget component and place it in your React component where you want the WhatsApp chat widget to appear.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The WhatsAppWidget component accepts several optional props to customize its appearance and behavior. Here are the available props:
 
-## Deploy on Vercel
+**phoneNumber**: Specify the phone number to which the WhatsApp messages should be sent.
+**autoOpen**: Set it to true to automatically open the WhatsApp chat widget when the component is mounted.
+**message**: Provide a pre-defined message that will be included in the initial WhatsApp message.
+**className**: Add custom CSS classes to the WhatsApp chat widget container.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Example usage with props:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```javascript
+<WhatsAppWidget
+  phoneNumber="+1234567890"
+  autoOpen={true}
+  message="Hello, I have a question about your product."
+  className="my-custom-widget"
+/>
+```
+
+Feel free to modify and style the widget according to your application's needs.
+
+## License
+
+This package is licensed under the MIT License. See the LICENSE file for details.
+
+## Contribution
+
+Contributions are welcome! If you have any bug reports, feature requests, or suggestions, please open an issue on the [GitHub repository](https://github.com/nihara96/whatsapp-widget).
+
+If you would like to contribute code, please follow the guidelines in the CONTRIBUTING file.
+
+## Author
+
+Nihara Mayurawasal
+GitHub: [nihara96](https://github.com/nihara96).
