@@ -1,6 +1,7 @@
 # Simple WhatsApp Widget
 
-Simple WhatsApp Widget is a lightweight and easy-to-use React component that allows you to add a WhatsApp chat widget to your web application.
+Simple WhatsApp Widget is a lightweight and easy-to-use React component that allows you to add a WhatsApp chat widget to your web application.<br> 
+[Live Preview](https://simple-whatsapp-widget.vercel.app/)
 
 ## Installation
 
