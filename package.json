@@ -1,6 +1,6 @@
 {
   "name": "simple-whatsapp-widget",
-  "version": "1.0.0",
+  "version": "1.0.11",
   "scripts": {
     "dev": "next dev",
     "build": "next build && babel src/components -d dist",
@@ -16,11 +16,22 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1"
   },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "whatsapp",
+    "widget",
+    "component"
+  ],
   "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
-  "main": "dist/WhatsAppWidget.js",
+  "main": "index.js",
   "devDependencies": {
-    "@babel/cli": "^7.22.5",
-    "@babel/preset-react": "^7.22.5",
+    "@babel/cli": "^7.15.8",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.8.1",
@@ -29,5 +40,14 @@
     "tailwindcss": "^3.3.2"
   },
   "author": "nihara",
-  "license": "ISC"
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "transform-class-properties"
+    ]
+  }
 }

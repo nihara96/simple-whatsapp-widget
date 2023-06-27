@@ -21,15 +21,14 @@ yarn add simple-whatsapp-widget
 
 ```javascript
 import React from "react";
-import WhatsAppWidget from "simple-whatsapp-widget";
+import WhatsAppWidget from 'simple-whatsapp-widget';
+import 'simple-whatsapp-widget/dist/styles.css'  
 
-export default function Home() => {
-  return (
-    <main>
-      <WhatsAppWidget phoneNumber="your_whatsapp_number"/>
-    </main>
-  );
-};
+export default function Home() {
+  return <main>
+   <WhatsAppWidget/>
+  </main>;
+}
 ```
 
 Simply import the WhatsAppWidget component and place it in your React component where you want the WhatsApp chat widget to appear.
