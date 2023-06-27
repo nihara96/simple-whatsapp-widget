@@ -1,6 +1,6 @@
 {
   "name": "simple-whatsapp-widget",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "scripts": {
     "dev": "next dev",
     "build": "next build && babel src/components -d dist",
@@ -40,7 +40,7 @@
     "tailwindcss": "^3.3.2"
   },
   "author": "nihara",
-  "license": "ISC",
+  "license": "MIT",
   "babel": {
     "presets": [
       "@babel/preset-env",
